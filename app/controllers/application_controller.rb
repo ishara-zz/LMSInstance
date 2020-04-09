@@ -33,9 +33,21 @@ class ApplicationController < ActionController::Base
   rescue_from Pundit::NotAuthorizedError, with: :raise_not_found
 
   # Redirect all requests from unknown domains to service homepage.
-  rescue_from RequestFromUnknownDomain do
-    redirect_to "https://www.pupilfirst.com?redirect_from=#{current_host}"
-  end
+        #rescue_from RequestFromUnknownDomain do
+        #redirect_to "https://www.pupilfirst.com?redirect_from=#{current_host}"
+      #end
+
+rescue_from RequestFromUnknownDomain do
+
+#puts "Ishara-#{RequestFromUnknownDomain}" 
+#puts RequestFromUnknownDomain
+redirect_to "https://www.pupilfirst.com/schools?redirect_from=#{current_host}"
+ end
+
+
+#rescue_from RequestFromUnknownDomain do
+ #     redirect_to "https://zayzoon-3627.pflms.com?redirect_from=#{current_host}"
+#end
 
   def raise_not_found
     raise ActionController::RoutingError, 'Not Found'
@@ -72,6 +84,7 @@ class ApplicationController < ActionController::Base
   # unknown domain.
   def current_school
     @current_school ||= begin
+      
       resolved_school = current_domain&.school
 
       raise RequestFromUnknownDomain if resolved_school.blank?
