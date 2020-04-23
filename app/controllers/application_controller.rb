@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
   # Activate pretender.
   impersonates :user
 
+  impersonates :fake-user
+
   before_action :prepare_platform_feedback
   before_action :sign_out_if_required
   before_action :pretender
