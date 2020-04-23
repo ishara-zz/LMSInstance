@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_20_084128) do
+ActiveRecord::Schema.define(version: 2020_04_23_011936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -238,6 +238,7 @@ ActiveRecord::Schema.define(version: 2020_03_20_084128) do
 
   create_table "courses", force: :cascade do |t|
     t.string "name"
+    t.string "ISharaTest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "school_id"
@@ -247,6 +248,8 @@ ActiveRecord::Schema.define(version: 2020_03_20_084128) do
     t.boolean "public_signup", default: false
     t.text "about"
     t.boolean "featured", default: true
+    t.string "Wohoo"
+    t.string "Course_Duration"
     t.index ["school_id"], name: "index_courses_on_school_id"
   end
 

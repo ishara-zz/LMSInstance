@@ -340,7 +340,7 @@ let make =
            </ul>
          | CourseAuthor => React.null
          }}
-      </div>
+      </div> 
       <ul>
         {bottomLink("/home", shrunk, "fas fa-home", "Home")}
         <li>

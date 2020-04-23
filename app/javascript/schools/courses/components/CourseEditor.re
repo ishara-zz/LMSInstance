@@ -16,6 +16,7 @@ module CoursesQuery = [%graphql
       about
       publicSignup
       featured
+      Wohoo
       cover{
         url
         filename

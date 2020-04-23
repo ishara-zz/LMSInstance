@@ -21,7 +21,7 @@ class Course < ApplicationRecord
   has_one_attached :thumbnail
   has_one_attached :cover
 
-  normalize_attribute :about
+  normalize_attribute :about, :Wohoo
 
   def short_name
     name[0..2].upcase.strip

@@ -1578,6 +1578,25 @@
             "isDeprecated": false,
             "deprecationReason": null
           },
+
+
+
+ {
+            "name": "Wohoo",
+            "description": "",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+},
+
+
+
+
           {
             "name": "cover",
             "description": "",
